@@ -28,6 +28,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/eduService/edu-teacher")
 @Api(description = "讲师管理")
+@CrossOrigin
 public class EduTeacherController {
 
     //http://localhost:8001/eduService/edu-teacher/findAllTeacher
@@ -83,17 +84,17 @@ public class EduTeacherController {
         }
     }
     //分页查询讲师的方法
-    @GetMapping("pageTeacher/{page}/{limit}")
-    public R pageListTeacher(
-            @PathVariable long page,
-            @PathVariable long limit){
-        //创建page对象
-        Page<EduTeacher> pageTeacher = new Page<>(page,limit);
-        eduTeacherService.page(pageTeacher,null);
-        long total = pageTeacher.getTotal();  //总记录数
-        List<EduTeacher> records = pageTeacher.getRecords();  //数据list集合
-        return R.ok().data("total",total).data("rows",records);
-    }
+//    @GetMapping("pageTeacher/{page}/{limit}")
+//    public R pageListTeacher(
+//            @PathVariable long page,
+//            @PathVariable long limit){
+//        //创建page对象
+//        Page<EduTeacher> pageTeacher = new Page<>(page,limit);
+//        eduTeacherService.page(pageTeacher,null);
+//        long total = pageTeacher.getTotal();  //总记录数
+//        List<EduTeacher> records = pageTeacher.getRecords();  //数据list集合
+//        return R.ok().data("total",total).data("rows",records);
+//    }
     //多条件组合查询带分页
     @PostMapping("multiPage/{page}/{limit}")
     public R multiPage(@PathVariable long page,
