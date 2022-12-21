@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vue-admin-template
 
 > A minimal vue admin template with Element UI & axios & iconfont & permission control & lint
@@ -86,3 +87,8 @@ Modern browsers and Internet Explorer 10+.
 [MIT](https://github.com/PanJiaChen/vue-admin-template/blob/master/LICENSE) license.
 
 Copyright (c) 2017-present PanJiaChen
+=======
+## oss
+AccessKey ID: LTAI5tK5Poc8bteqP4PfieFM
+AccessKey Secret: 4B45CWFIFCFW8gDwkObFcwkUYw6Nu3
+>>>>>>> c85cab90 (anan 2022/12/21 12:14)

@@ -11,7 +11,4 @@
     <packaging>jar</packaging>
 
     <name>service_edu</name>
-
-    <dependencies>
-    </dependencies>
 </project>
