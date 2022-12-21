@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 public class SubjectData {
-    @ExcelProperty(index = 0)
+    @ExcelProperty(value = "一级分类",index = 0)
     private String oneSubjectName;
-    @ExcelProperty(index = 1)
+    @ExcelProperty(value = "二级分类",index = 1)
     private String twoSubjectName;
 }
