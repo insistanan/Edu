@@ -31,7 +31,24 @@ public class SubjectExcelListener extends AnalysisEventListener<SubjectData> {
             throw new ananException(20001,"文件数据为空");
         }else {
             //一行一行读取，每一行有两个值，第一个值为一级分类，第二个值为二级分类
-
+            //判断一级分类是否重复
+            EduSubject existOneSubject = this.existOneSubject(subjectService, subjectData.getOneSubjectName());
+            if (existOneSubject == null){
+                //没有相同一级分类，不重复，进行添加
+                existOneSubject = new EduSubject();
+                existOneSubject.setParentId("0");
+                existOneSubject.setTitle(subjectData.getOneSubjectName());
+                subjectService.save(existOneSubject);
+            }
+            //判断二级分类是否重复
+            String pid = existOneSubject.getId();
+            EduSubject existTwoSubject = this.existTwoSubject(subjectService, subjectData.getTwoSubjectName(), pid);
+            if (existTwoSubject == null){
+                existTwoSubject = new EduSubject();
+                existTwoSubject.setParentId(pid);
+                existTwoSubject.setTitle(subjectData.getTwoSubjectName());
+                subjectService.save(existTwoSubject);
+            }
         }
     }
 
