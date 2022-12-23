@@ -1,6 +1,7 @@
 package com.anan.eduService.mapper;
 
 import com.anan.eduService.entity.EduCourse;
+import com.anan.eduService.entity.vo.CoursePublishVO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
@@ -12,5 +13,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2022-12-22
  */
 public interface EduCourseMapper extends BaseMapper<EduCourse> {
-
+    CoursePublishVO selectCoursePublishVOById(String id);
 }

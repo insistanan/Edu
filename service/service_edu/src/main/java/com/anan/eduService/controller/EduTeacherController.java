@@ -76,7 +76,6 @@ public class EduTeacherController {
             @ApiParam(name="id",value="讲师IDR",required = true)
             @PathVariable String id) {
         boolean result = eduTeacherService.removeById(id);
-        System.out.println(result);
         if (result) {
             return R.ok();
         } else {

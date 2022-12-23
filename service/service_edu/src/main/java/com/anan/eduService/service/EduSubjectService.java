@@ -16,7 +16,6 @@ import java.util.List;
  * @author anan_
  * @since 2022-12-21
  */
-@Service
 public interface EduSubjectService extends IService<EduSubject> {
 
     /**

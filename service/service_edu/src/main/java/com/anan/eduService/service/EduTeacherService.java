@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
  * @author anan_
  * @since 2022-12-17
  */
-@Service
 public interface EduTeacherService extends IService<EduTeacher> {
 //    void pageQuery(Page<Tea>);
 }
