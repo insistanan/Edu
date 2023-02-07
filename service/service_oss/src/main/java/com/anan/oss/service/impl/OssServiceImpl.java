@@ -3,15 +3,13 @@ package com.anan.oss.service.impl;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.anan.oss.service.OssService;
-import com.anan.oss.utils.ConstantPropertiesUtils;
+import com.anan.oss.util.ConstantPropertiesUtils;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.UUID;
 
 @Service
